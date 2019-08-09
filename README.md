@@ -19,6 +19,7 @@
 
    ```
    $ nvidia-docker run -ti -p (외부포트번호):22 -v (마운트 할 폴더 경로):(컨테이너 내 마운트 된 폴더 저장 경로) --privileged --name (컨테이너 명) (이미지 명):(태그)
+   $ nvidia-docker run -ti -p 50025:22 --shm-size 8G -v /media/mmlab/hdd2/mj:/workspace --name trn-4 pytorch/pytorch:0.4-cuda9-cudnn7-devel
    ```
 
    - **-ti** : bash로 시작, 만약 되지 않는다면, 맨 끝에 /bin/bash 추가
